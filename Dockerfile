@@ -1,6 +1,4 @@
-FROM golang:latest
-WORKDIR /root/micor_go
-COPY / /root/micor_go
-RUN go env -w GOPROXY=https://goproxy.cn,direct
-RUN go build -o user
-ENTRYPOINT ["./user"]
+FROM mysql:5.7
+WORKDIR /docker-entrypoint-initdb.d
+ENV LANG-C.UTF-8
+COPY init.sql .
