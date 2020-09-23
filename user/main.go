@@ -31,7 +31,7 @@ func main(){
 	errChan := make(chan error)
 
 	// 初始化 MySQL
-	err := dao.InitMysql("localhost", "3306", "root", "ghost2111", "flaskr")
+	err := dao.InitMysql("localhost", "3306", "root", "123456", "user")
 	if err != nil{
 		log.Fatal(err)
 	}
